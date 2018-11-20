@@ -1,2 +1,54 @@
-# postgresql_dumps
-PostgreSQL dumps from EALGIS's data loaders
+# EALGIS Data Loader: PostgreSQL Dumps
+
+PostgreSQL database dumps generated from EALGIS's data loaders.
+
+Download the dump files from below and restore them into your database.
+
+## Data Loaders
+
+-   [2016 Census](https://github.com/ealgis/aus-census-2016)
+-   [2011 Census](https://github.com/ealgis/aus-census-2011)
+
+## Pre-requisites
+
+-   Postgres 10+ with PostGIS 2.4+
+-   A knowledge of [Postgres pg_restore parameters](http://www.postgresql.org/docs/9.5/static/app-pgrestore.html)
+
+## Dumps
+
+**2011 Census**
+
+-   [Basic Community Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_bcp.dump) (~335MB)
+-   [Indigenous Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_ip.dump) (~23MB)
+-   [Place of Enumeration Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_pep.dump) (~334MB)
+-   [Time Series Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_tsp.dump) (~79MB)
+-   [Working Population Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_wpp.dump) (~32MB)
+-   [Extended Community Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_xcp.dump) (~59MB)
+-   [ASGS Geometry](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_shapes.dump) (~2.7GB)
+
+**2016 Census**
+
+-   [Aboriginal and Torres Strait Islander Peoples Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016_atsip.dump) (~19MB)
+-   [General Community Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016_gcp.dump) (~512MB)
+-   [Place of Enumeration Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016_pep.dump) (~357MB)
+-   [Time Series Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016_tsp.dump) (~62MB)
+-   [Working Population Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016_wpp.dump) (~35MB)
+-   [ASGS Geometry](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016_shapes.dump) (~1.6GB)
+
+## Process
+
+1. Download one or more set of dumps
+2. Run `pg_restore` for each dump e.g. `pg_restore --host=localhost --username=postgres --dbname=your-database-name /path/to/your/folder/dumps/aus_census_2016_gcp.dump` and enjoy!
+3. Run `VACUUM ANALYZE` on each of the database schemas that were loaded (e.g. aus_census_2016_gcp, aus_census_2016_pep)
+
+### Data Licenses
+
+Incorporates or developed using Census data from the Australian Bureau of Statistics under [Creative Commons Attribution 4.0 International licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+Incorporates or developed using Australian Statistical Geography Standard data from the Australian Bureau of Statistics under [Creative Commons Attribution 4.0 International licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+## Data Customisation
+
+Census data have been customised to remove some of the known, minor limitations with the data. The most notable are:
+
+-   ABS metadata statements have been parsed through our data loaders to turn the provided XLS files into a queryable JSON structure. As always, please refer back to the source metadata.
