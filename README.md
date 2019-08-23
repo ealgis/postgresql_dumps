@@ -8,32 +8,47 @@ Download the dump files from below and restore them into your database.
 
 -   [2016 Census](https://github.com/ealgis/aus-census-2016)
 -   [2011 Census](https://github.com/ealgis/aus-census-2011)
+-   [Australian Electorates](https://github.com/ealgis/australian-electorates)
+-   [Australian Statistical Geography Standard](https://github.com/ealgis/asgs)
+-   [Generic CSV Loader](https://github.com/ealgis/generic-csv-loader)
 
 ## Pre-requisites
 
--   Postgres 10+ with PostGIS 2.4+
+-   PostgreSQL 10+ with PostGIS 2.4+
 -   A knowledge of [Postgres pg_restore parameters](http://www.postgresql.org/docs/9.5/static/app-pgrestore.html)
 
 ## Dumps
 
+These dumps come from PostgreSQL 10.7 and PostGIS 2.5.
+
 **2011 Census**
 
--   [Basic Community Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_bcp.dump) (~335MB)
--   [Indigenous Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_ip.dump) (~23MB)
--   [Place of Enumeration Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_pep.dump) (~334MB)
--   [Time Series Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_tsp.dump) (~79MB)
--   [Working Population Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_wpp.dump) (~32MB)
--   [Extended Community Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_xcp.dump) (~59MB)
--   [ASGS Geometry](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011_shapes.dump) (~2.7GB)
+-   [Basic Community Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011/aus_census_2011_bcp.dump) (~335MB)
+-   [Indigenous Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011/aus_census_2011_ip.dump) (~23MB)
+-   [Place of Enumeration Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011/aus_census_2011_pep.dump) (~334MB)
+-   [Time Series Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011/aus_census_2011_tsp.dump) (~79MB)
+-   [Working Population Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011/aus_census_2011_wpp.dump) (~32MB)
+-   [Extended Community Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011/aus_census_2011_xcp.dump) (~59MB)
+-   [ASGS Geometry](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2011/aus_census_2011_shapes.dump) (~2.7GB)
 
 **2016 Census**
 
--   [Aboriginal and Torres Strait Islander Peoples Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016_atsip.dump) (~19MB)
--   [General Community Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016_gcp.dump) (~512MB)
--   [Place of Enumeration Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016_pep.dump) (~357MB)
--   [Time Series Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016_tsp.dump) (~62MB)
--   [Working Population Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016_wpp.dump) (~35MB)
--   [ASGS Geometry](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016_shapes.dump) (~1.6GB)
+-   [Aboriginal and Torres Strait Islander Peoples Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016/aus_census_2016_atsip.dump) (~19MB)
+-   [General Community Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016/aus_census_2016_gcp.dump) (~512MB)
+-   [Place of Enumeration Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016/aus_census_2016_pep.dump) (~357MB)
+-   [Time Series Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016/aus_census_2016_tsp.dump) (~62MB)
+-   [Working Population Profile](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016/aus_census_2016_wpp.dump) (~35MB)
+-   [ASGS Geometry](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/aus_census_2016/aus_census_2016_shapes.dump) (~1.6GB)
+
+**Australian Electorates**
+
+-   [Federal](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/australian-electorates/au_federal_electorate_boundaries.dump) (~587MB)
+-   [NSW](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/australian-electorates/au_nsw_state_electorate_boundaries.dump) (~30MB)
+-   [NT](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/australian-electorates/au_nt_state_electorate_boundaries.dump) (~1MB)
+-   [QLD](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/australian-electorates/au_qld_state_electorate_boundaries.dump) (~20MB)
+-   [SA](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/australian-electorates/au_sa_state_electorate_boundaries.dump) (~29MB)
+-   [VIC](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/australian-electorates/au_vic_state_electorate_boundaries.dump) (~64MB)
+-   [WA](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/australian-electorates/au_wa_state_electorate_boundaries.dump) (~73MB)
 
 ## Process
 
@@ -47,8 +62,10 @@ Incorporates or developed using Census data from the Australian Bureau of Statis
 
 Incorporates or developed using Australian Statistical Geography Standard data from the Australian Bureau of Statistics under [Creative Commons Attribution 4.0 International licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
+Incorporates data from Australian federal and state electoral commissions. Refer to [Australian Electorates](https://github.com/ealgis/australian-electorates).
+
 ## Data Customisation
 
-Census data have been customised to remove some of the known, minor limitations with the data. The most notable are:
+Census metadata files have been customised to fix some of their known minor limitations. The most notable are:
 
 -   ABS metadata statements have been parsed through our data loaders to turn the provided XLS files into a queryable JSON structure. As always, please refer back to the source metadata.
