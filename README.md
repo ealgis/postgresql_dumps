@@ -52,15 +52,15 @@ These dumps come from PostgreSQL 10.7 and PostGIS 2.5.
 
 **Australian Statistical Geography Standard**
 
--   [ASGS Geometry 2011](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2011_boundaries.dump)
--   [ASGS Geometry 2012](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2012_boundaries.dump)
--   [ASGS Geometry 2013](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2013_boundaries.dump)
--   [ASGS Geometry 2014](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2014_boundaries.dump)
--   [ASGS Geometry 2015](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2015_boundaries.dump)
--   [ASGS Geometry 2016](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2016_boundaries.dump)
--   [ASGS Geometry 2017](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2017_boundaries.dump)
--   [ASGS Geometry 2018](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2018_boundaries.dump)
--   [ASGS Geometry 2019](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2019_boundaries.dump)
+-   [ASGS Geometry 2011](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2011_boundaries.dump) (~1.3GB)
+-   [ASGS Geometry 2012](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2012_boundaries.dump) (~248MB)
+-   [ASGS Geometry 2013](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2013_boundaries.dump) (~364MB)
+-   [ASGS Geometry 2014](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2014_boundaries.dump) (~251MB)
+-   [ASGS Geometry 2015](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2015_boundaries.dump) (~251MB)
+-   [ASGS Geometry 2016](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2016_boundaries.dump) (~1.4GB)
+-   [ASGS Geometry 2017](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2017_boundaries.dump) (~403MB)
+-   [ASGS Geometry 2018](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2018_boundaries.dump) (~402MB)
+-   [ASGS Geometry 2019](https://s3-ap-southeast-2.amazonaws.com/ealgis/dumps/asgs/asgs_2019_boundaries.dump) (~153MB)
 
 ## Process
 
